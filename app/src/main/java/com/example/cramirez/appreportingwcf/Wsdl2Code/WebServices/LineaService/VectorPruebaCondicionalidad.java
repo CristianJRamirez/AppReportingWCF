@@ -41,34 +41,34 @@ public class VectorPruebaCondicionalidad extends Vector<PruebaCondicionalidad> i
             }
         }
     }
-    @Override
+ 
     public Object getProperty(int arg0) {
         return this.get(arg0);
     }
     
-    @Override
+ 
     public int getPropertyCount() {
         return this.size();
     }
     
-    @Override
+ 
     public void getPropertyInfo(int index, @SuppressWarnings("rawtypes") Hashtable arg1, PropertyInfo info) {
         info.name = "PruebaCondicionalidad";
         info.type = PruebaCondicionalidad.class;
     }
     
-    @Override
+ 
     public String getInnerText() {
         return null;
     }
     
     
-    @Override
+ 
     public void setInnerText(String s) {
     }
     
     
-    @Override
+ 
     public void setProperty(int arg0, Object arg1) {
     }
     

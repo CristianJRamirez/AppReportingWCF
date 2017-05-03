@@ -263,7 +263,7 @@ public class ConfiguracionVeredicto implements KvmSerializable {
             }
         }
     }
-    @Override
+ 
     public Object getProperty(int arg0) {
         switch(arg0){
             case 0:
@@ -314,12 +314,12 @@ public class ConfiguracionVeredicto implements KvmSerializable {
         return null;
     }
     
-    @Override
+ 
     public int getPropertyCount() {
         return 22;
     }
     
-    @Override
+ 
     public void getPropertyInfo(int index, @SuppressWarnings("rawtypes") Hashtable arg1, PropertyInfo info) {
         switch(index){
             case 0:
@@ -413,18 +413,18 @@ public class ConfiguracionVeredicto implements KvmSerializable {
         }
     }
     
-    @Override
+ 
     public String getInnerText() {
         return null;
     }
     
     
-    @Override
+ 
     public void setInnerText(String s) {
     }
     
     
-    @Override
+ 
     public void setProperty(int arg0, Object arg1) {
     }
     

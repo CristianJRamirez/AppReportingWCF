@@ -18,9 +18,18 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import org.ksoap2.serialization.PropertyInfo;
+import org.ksoap2.serialization.SoapObject;
+
 import java.io.ByteArrayOutputStream;
+import java.sql.Time;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 import java.util.Vector;
 
 
@@ -116,26 +125,86 @@ public class MainActivity extends AppCompatActivity  implements com.example.cram
         }
     }
 
-    public ArrayList<QUERY_Provincias_Result> callWebServiceLinea(){
+    public void callWebServiceLinea(){
 
 
-        LineaService lineaService = new LineaService(this);
-        ReportingService reportingService = new ReportingService(this);
+        LineaService lineaService = new LineaService();
+
+        String NAMESPACE = "http://tempuri.org/";
+        String URL = "http://172.18.2.190/DNOTALinea/LineaService.svc";
+        String SOAP_ACTION = "...";
+        String METODO = null;
+
 
         try {
-            VectorQUERY_Provincias_Result resultado= reportingService.getProvincias();
+            //genero las propiedades que se necesitan para el RegistroEtiquetas, Comprovar que las fechas funciona
+            ArrayList<PropertyInfo> lista=generarProperty();
 
-            ArrayList<QUERY_Provincias_Result> list = new ArrayList<QUERY_Provincias_Result>(resultado);
+            //creo el objeto Soap para pasarselo al SET
+            SoapObject soap = new SoapObject(NAMESPACE,METODO);
 
-            Log.d("DATOS",resultado.get(0).codigoCorreos);
-            txt.setText(resultado.get(0).codigoCorreos);
-            return  list;
+
+            for (PropertyInfo pInfo:lista) {
+                soap.addProperty(pInfo);
+            }
+
+            //instancio el servicio de guardar datos en la BBDD
+            lineaService.setRegistroEtiquetas(new SetRegistroEtiquetasInput(soap));
+
+           /* Log.d("DATOS",resultado.get(0).codigoCorreos);
+            txt.setText(resultado.get(0).codigoCorreos);*/
+            //return  list;
 
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-            return null;
+            //return null;
         }
+    }
+
+    private ArrayList<PropertyInfo> generarProperty() {
+        ArrayList<PropertyInfo> lista= new ArrayList<PropertyInfo>();
+
+        Date d = new Date();
+
+        PropertyInfo idUsuario = new PropertyInfo ();
+            idUsuario.setName("idUsuario");
+            idUsuario.setValue((long)2);
+            lista.add(idUsuario);
+        PropertyInfo idCentro = new PropertyInfo ();
+            idCentro.setName("idCentro");
+            idCentro.setValue((long)5);
+            lista.add(idCentro);
+        PropertyInfo descripcionLote = new PropertyInfo ();
+            descripcionLote.setName("descripcionLote");
+            descripcionLote.setValue("descripcion del lote");
+            lista.add(descripcionLote);
+        PropertyInfo fechaIni = new PropertyInfo ();
+            fechaIni.setName("fechaIni");
+            fechaIni.setValue(d.getTime());
+            lista.add(fechaIni);
+        PropertyInfo fechaFin = new PropertyInfo ();
+            fechaFin.setName("fechaFin");
+            fechaFin.setValue(d.getTime());
+            lista.add(fechaFin);
+        PropertyInfo minNum = new PropertyInfo ();
+            minNum.setName("minNum");
+            minNum.setValue((long)5);
+            lista.add(minNum);
+        PropertyInfo maxNum = new PropertyInfo ();
+            maxNum.setName("maxNum");
+            maxNum.setValue((long)5);
+            lista.add(maxNum);
+        PropertyInfo libre = new PropertyInfo ();
+            libre.setName("libre");
+            libre.setValue((boolean)true);
+            lista.add(libre);
+        PropertyInfo valido = new PropertyInfo ();
+            valido.setName("valido");
+            valido.setValue((boolean)true);
+            lista.add(valido);
+
+        return lista;
     }
 
 

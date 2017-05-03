@@ -40,34 +40,34 @@ public class VectorInt64 extends Vector<Number> implements KvmSerializable {
             }
         }
     }
-    @Override
+ 
     public Object getProperty(int arg0) {
         return this.get(arg0);
     }
     
-    @Override
+ 
     public int getPropertyCount() {
         return this.size();
     }
     
-    @Override
+ 
     public void getPropertyInfo(int index, @SuppressWarnings("rawtypes") Hashtable arg1, PropertyInfo info) {
         info.name = "long";
         info.type = long.class;
     }
     
-    @Override
+ 
     public String getInnerText() {
         return null;
     }
     
     
-    @Override
+ 
     public void setInnerText(String s) {
     }
     
     
-    @Override
+ 
     public void setProperty(int arg0, Object arg1) {
     }
     

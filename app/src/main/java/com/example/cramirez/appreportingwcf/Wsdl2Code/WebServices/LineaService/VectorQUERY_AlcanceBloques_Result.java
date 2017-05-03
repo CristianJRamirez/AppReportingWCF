@@ -41,34 +41,34 @@ public class VectorQUERY_AlcanceBloques_Result extends Vector<QUERY_AlcanceBloqu
             }
         }
     }
-    @Override
+ 
     public Object getProperty(int arg0) {
         return this.get(arg0);
     }
     
-    @Override
+ 
     public int getPropertyCount() {
         return this.size();
     }
     
-    @Override
+ 
     public void getPropertyInfo(int index, @SuppressWarnings("rawtypes") Hashtable arg1, PropertyInfo info) {
         info.name = "QUERY_AlcanceBloques_Result";
         info.type = QUERY_AlcanceBloques_Result.class;
     }
     
-    @Override
+ 
     public String getInnerText() {
         return null;
     }
     
     
-    @Override
+ 
     public void setInnerText(String s) {
     }
     
     
-    @Override
+ 
     public void setProperty(int arg0, Object arg1) {
     }
     

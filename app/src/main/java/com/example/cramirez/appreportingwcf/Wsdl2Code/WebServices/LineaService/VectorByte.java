@@ -41,38 +41,38 @@ public class VectorByte extends Vector<Byte> implements KvmSerializable {
             add(b);
         }
     }
-    @Override
+ 
     public Object getProperty(int arg0) {
         return this.get(arg0);
     }
     
-    @Override
+ 
     public int getPropertyCount() {
         return this.size();
     }
     
-    @Override
+ 
     public void getPropertyInfo(int index, @SuppressWarnings("rawtypes") Hashtable arg1, PropertyInfo info) {
         info.name = "Byte";
         info.type = Byte.class;
     }
     
-    @Override
+ 
     public String getInnerText() {
         return null;
     }
     
     
-    @Override
+ 
     public void setInnerText(String s) {
     }
     
     
-    @Override
+ 
     public void setProperty(int arg0, Object arg1) {
     }
     
-    @Override
+ 
     public String toString() {
         byte[] byteToString = toBytes();
         return Base64.encodeToString(byteToString, Base64.DEFAULT);

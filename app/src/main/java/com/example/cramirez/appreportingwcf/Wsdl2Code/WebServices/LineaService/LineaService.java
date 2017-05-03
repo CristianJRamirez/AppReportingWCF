@@ -64,15 +64,15 @@ public class LineaService {
     public void setInspeccionAlcance_CondicionalidadFinalAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccionAlcance,final boolean idInspeccionAlcanceSpecified,final long idCondicionalidadFinal,final boolean idCondicionalidadFinalSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setInspeccionAlcance_CondicionalidadFinal(idUsuario, idUsuarioSpecified, idInspeccionAlcance, idInspeccionAlcanceSpecified, idCondicionalidadFinal, idCondicionalidadFinalSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -143,15 +143,15 @@ public class LineaService {
     public void getInspeccionBloqueEstadoByInspeccionBloqueAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinsp,final boolean idinspSpecified,final long idbloque,final boolean idbloqueSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, InspeccionBloqueEstado>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected InspeccionBloqueEstado doInBackground(Void... params) {
                 return getInspeccionBloqueEstadoByInspeccionBloque(idUsuario, idUsuarioSpecified, idinsp, idinspSpecified, idbloque, idbloqueSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(InspeccionBloqueEstado result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -218,16 +218,16 @@ public class LineaService {
     public void esEtapaCerradaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinsp,final boolean idinspSpecified,final long idetapa,final boolean idetapaSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 esEtapaCerrada(idUsuario, idUsuarioSpecified, idinsp, idinspSpecified, idetapa, idetapaSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -277,15 +277,15 @@ public class LineaService {
     public void setCerrarInspeccionAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long idVehiculo,final boolean idVehiculoSpecified,final String fechaValidez,final boolean fechaValidezSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setCerrarInspeccion(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, idVehiculo, idVehiculoSpecified, fechaValidez, fechaValidezSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -358,15 +358,15 @@ public class LineaService {
     public void setReabrirInspeccionAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setReabrirInspeccion(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -435,15 +435,15 @@ public class LineaService {
     public void getNeumaticosAsync(final long idUsuario,final boolean idUsuarioSpecified,final String empiezaPor,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorNeumaticos>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorNeumaticos doInBackground(Void... params) {
                 return getNeumaticos(idUsuario, idUsuarioSpecified, empiezaPor, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorNeumaticos result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -506,15 +506,15 @@ public class LineaService {
     public void getNeumaticosVelocidadAsync(final long idUsuario,final boolean idUsuarioSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorNeumaticosVelocidad>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorNeumaticosVelocidad doInBackground(Void... params) {
                 return getNeumaticosVelocidad(idUsuario, idUsuarioSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorNeumaticosVelocidad result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -576,15 +576,15 @@ public class LineaService {
     public void getNeumaticosCargaAsync(final long idUsuario,final boolean idUsuarioSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorNeumaticosCarga>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorNeumaticosCarga doInBackground(Void... params) {
                 return getNeumaticosCarga(idUsuario, idUsuarioSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorNeumaticosCarga result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -646,15 +646,15 @@ public class LineaService {
     public void getDefectosInspeccionAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinspe,final boolean idinspeSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorQUERY_InspeccionDefectos_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorQUERY_InspeccionDefectos_Result doInBackground(Void... params) {
                 return getDefectosInspeccion(idUsuario, idUsuarioSpecified, idinspe, idinspeSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorQUERY_InspeccionDefectos_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -718,15 +718,15 @@ public class LineaService {
     public void getDefectosBloquesAsync(final long idUsuario,final boolean idUsuarioSpecified,final String bloques,final String defectos,final long idClassificacionField,final boolean idClassificacionSpecifiedField,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorQUERY_DefectosBloques_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorQUERY_DefectosBloques_Result doInBackground(Void... params) {
                 return getDefectosBloques(idUsuario, idUsuarioSpecified, bloques, defectos, idClassificacionField, idClassificacionSpecifiedField, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorQUERY_DefectosBloques_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -794,15 +794,15 @@ public class LineaService {
     public void setInspeccionDefectoAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinsp,final boolean idinspSpecified,final long iddef,final boolean iddefSpecified,final long tipo,final boolean tipoSpecified,final long idetapa,final boolean idetapaSpecified,final long idbloque,final boolean idbloqueSpecified,final String observaciones,final String localizacion,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setInspeccionDefecto(idUsuario, idUsuarioSpecified, idinsp, idinspSpecified, iddef, iddefSpecified, tipo, tipoSpecified, idetapa, idetapaSpecified, idbloque, idbloqueSpecified, observaciones, localizacion, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -881,15 +881,15 @@ public class LineaService {
     public void delInspeccionDefectoAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinspdef,final boolean idinspdefSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return delInspeccionDefecto(idUsuario, idUsuarioSpecified, idinspdef, idinspdefSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -958,15 +958,15 @@ public class LineaService {
     public void setInspeccionObservacionesAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinsp,final boolean idinspSpecified,final String texto,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setInspeccionObservaciones(idUsuario, idUsuarioSpecified, idinsp, idinspSpecified, texto, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1036,15 +1036,15 @@ public class LineaService {
     public void setInspeccionNotasInternasAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinsp,final boolean idinspSpecified,final String texto,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setInspeccionNotasInternas(idUsuario, idUsuarioSpecified, idinsp, idinspSpecified, texto, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1114,16 +1114,16 @@ public class LineaService {
     public void updataAllInspeccionDefectoPruebaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long idEtapa,final boolean idEtapaSpecified,final VectorString codigosDefectos,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 updataAllInspeccionDefectoPrueba(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, idEtapa, idEtapaSpecified, codigosDefectos, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1174,15 +1174,15 @@ public class LineaService {
     public void ActInspeccionDefectoTipoAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinspdef,final boolean idinspdefSpecified,final long tipo,final boolean tipoSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return ActInspeccionDefectoTipo(idUsuario, idUsuarioSpecified, idinspdef, idinspdefSpecified, tipo, tipoSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1253,15 +1253,15 @@ public class LineaService {
     public void getInspeccionResultadosPruebasAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorInspeccionResultadoPrueba>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorInspeccionResultadoPrueba doInBackground(Void... params) {
                 return getInspeccionResultadosPruebas(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorInspeccionResultadoPrueba result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1325,15 +1325,15 @@ public class LineaService {
     public void getInspeccionesNoFinalidasAvanzadoAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idCentro,final boolean idCentroSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorQUERY_InspeccionesNoFinalidas_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorQUERY_InspeccionesNoFinalidas_Result doInBackground(Void... params) {
                 return getInspeccionesNoFinalidasAvanzado(idUsuario, idUsuarioSpecified, idCentro, idCentroSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorQUERY_InspeccionesNoFinalidas_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1397,16 +1397,16 @@ public class LineaService {
     public void agregarInspeccionPruebaResultadoAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final VectorSimpleLongString pruebasElementos,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 agregarInspeccionPruebaResultado(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, pruebasElementos, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1455,16 +1455,16 @@ public class LineaService {
     public void updateInspeccionPruebaResultadoAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final VectorSimpleLongString pruebasElementos,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 updateInspeccionPruebaResultado(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, pruebasElementos, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1513,15 +1513,15 @@ public class LineaService {
     public void setAbrirEtapaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinsp,final boolean idinspSpecified,final String etapa,final String usuario,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setAbrirEtapa(idUsuario, idUsuarioSpecified, idinsp, idinspSpecified, etapa, usuario, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1592,15 +1592,15 @@ public class LineaService {
     public void setSalirEtapaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinsp,final boolean idinspSpecified,final boolean borrar,final boolean borrarSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setSalirEtapa(idUsuario, idUsuarioSpecified, idinsp, idinspSpecified, borrar, borrarSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1671,15 +1671,15 @@ public class LineaService {
     public void setInspeccionDefectoPorCodigoAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinsp,final boolean idinspSpecified,final String coddef,final long tipo,final boolean tipoSpecified,final long idetapa,final boolean idetapaSpecified,final long idbloque,final boolean idbloqueSpecified,final String observaciones,final String localizacion,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setInspeccionDefectoPorCodigo(idUsuario, idUsuarioSpecified, idinsp, idinspSpecified, coddef, tipo, tipoSpecified, idetapa, idetapaSpecified, idbloque, idbloqueSpecified, observaciones, localizacion, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1757,15 +1757,15 @@ public class LineaService {
     public void delInspeccionDefectoPedientesAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idins,final boolean idinsSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return delInspeccionDefectoPedientes(idUsuario, idUsuarioSpecified, idins, idinsSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1834,15 +1834,15 @@ public class LineaService {
     public void getDatosVehiculoAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, QUERY_DatosVehiculo_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected QUERY_DatosVehiculo_Result doInBackground(Void... params) {
                 return getDatosVehiculo(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(QUERY_DatosVehiculo_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1907,16 +1907,16 @@ public class LineaService {
     public void hayCambioDeImporteAsync(final long idCentro,final boolean idCentroSpecified,final long nuevaClasificacion,final boolean nuevaClasificacionSpecified,final long nuevoCombustible,final boolean nuevoCombustibleSpecified,final long idSolicitud,final boolean idSolicitudSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 hayCambioDeImporte(idCentro, idCentroSpecified, nuevaClasificacion, nuevaClasificacionSpecified, nuevoCombustible, nuevoCombustibleSpecified, idSolicitud, idSolicitudSpecified, idInspeccion, idInspeccionSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -1970,15 +1970,15 @@ public class LineaService {
     public void setCerrarEtapaAsync(final long idUsuario,final boolean idUsuarioSpecified,final String codUsuario,final long idinsp,final boolean idinspSpecified,final long idetapa,final boolean idetapaSpecified,final VectorInt64 bloqAct,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setCerrarEtapa(idUsuario, idUsuarioSpecified, codUsuario, idinsp, idinspSpecified, idetapa, idetapaSpecified, bloqAct, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2051,16 +2051,16 @@ public class LineaService {
     public void HayInspeccionDefectoPedientesAsync(final long idins,final boolean idinsSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 HayInspeccionDefectoPedientes(idins, idinsSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2106,15 +2106,15 @@ public class LineaService {
     public void getAlcanceBloquesAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final String bloques,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorQUERY_AlcanceBloques_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorQUERY_AlcanceBloques_Result doInBackground(Void... params) {
                 return getAlcanceBloques(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, bloques, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorQUERY_AlcanceBloques_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2179,16 +2179,16 @@ public class LineaService {
     public void SincronicarInspeccionAsync(final long idUsuario,final boolean idUsuarioSpecified,final String codigoInspeccion,final long idCentroPeticion,final boolean idCentroPeticionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 SincronicarInspeccion(idUsuario, idUsuarioSpecified, codigoInspeccion, idCentroPeticion, idCentroPeticionSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2237,15 +2237,15 @@ public class LineaService {
     public void getInspeccionByNumAsync(final long idUsuario,final boolean idUsuarioSpecified,final String numInspeccion,final long idCentro,final boolean idCentroSpecified,final boolean sincronizar,final boolean sincronizarSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Inspeccion>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Inspeccion doInBackground(Void... params) {
                 return getInspeccionByNum(idUsuario, idUsuarioSpecified, numInspeccion, idCentro, idCentroSpecified, sincronizar, sincronizarSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(Inspeccion result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2313,16 +2313,16 @@ public class LineaService {
     public void agregarTramaPruebaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long idPrueba,final boolean idPruebaSpecified,final long idMaquina,final boolean idMaquinaSpecified,final String trama,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 agregarTramaPrueba(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, idPrueba, idPruebaSpecified, idMaquina, idMaquinaSpecified, trama, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2375,16 +2375,16 @@ public class LineaService {
     public void calcularTipoResultadoInspeccionAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 calcularTipoResultadoInspeccion(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2432,16 +2432,16 @@ public class LineaService {
     public void setInspeccionAlcancePruebas_CondicionalidadFinalAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long bloque,final boolean bloqueSpecified,final String restoBloques,final VectorString apartadosSiSeEjecutan,final VectorString apartadosNoSeEjecutan,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 setInspeccionAlcancePruebas_CondicionalidadFinal(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, bloque, bloqueSpecified, restoBloques, apartadosSiSeEjecutan, apartadosNoSeEjecutan, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2494,15 +2494,15 @@ public class LineaService {
     public void getInspeciconLineaBoxAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, InspeccionBoxLinea>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected InspeccionBoxLinea doInBackground(Void... params) {
                 return getInspeciconLineaBox(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(InspeccionBoxLinea result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2567,16 +2567,16 @@ public class LineaService {
     public void setInspecionBloqueEstadoEvaluacionAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long idBloque,final boolean idBloqueSpecified,final boolean evaluado,final boolean evaluadoSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 setInspecionBloqueEstadoEvaluacion(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, idBloque, idBloqueSpecified, evaluado, evaluadoSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2628,16 +2628,16 @@ public class LineaService {
     public void setAlcancePruebaFinalizadoAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idAlcancePrueba,final boolean idAlcancePruebaSpecified,final boolean finalizar,final boolean finalizarSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 setAlcancePruebaFinalizado(idUsuario, idUsuarioSpecified, idAlcancePrueba, idAlcancePruebaSpecified, finalizar, finalizarSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2687,16 +2687,16 @@ public class LineaService {
     public void DoWorkAsync(final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 DoWork(headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2740,16 +2740,16 @@ public class LineaService {
     public void setRegistroEtiquetasAsync(final SetRegistroEtiquetasInput setRegistroEtiquetasInput,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 setRegistroEtiquetas(setRegistroEtiquetasInput, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2795,16 +2795,16 @@ public class LineaService {
     public void setAsignarEtiquetaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long nEtiqueta,final boolean nEtiquetaSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long tipo,final boolean tipoSpecified,final String observaciones,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 setAsignarEtiqueta(idUsuario, idUsuarioSpecified, nEtiqueta, nEtiquetaSpecified, idInspeccion, idInspeccionSpecified, tipo, tipoSpecified, observaciones, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2857,15 +2857,15 @@ public class LineaService {
     public void getBuscadorInspeccionesAsync(final long idUsuario,final boolean idUsuarioSpecified,final String txtMatricula,final String txtNInspeccion,final String txtDNI,final String dtpDesde,final boolean dtpDesdeSpecified,final String dtpHasta,final boolean dtpHastaSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorQUERY_BuscadorInspecciones_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorQUERY_BuscadorInspecciones_Result doInBackground(Void... params) {
                 return getBuscadorInspecciones(idUsuario, idUsuarioSpecified, txtMatricula, txtNInspeccion, txtDNI, dtpDesde, dtpDesdeSpecified, dtpHasta, dtpHastaSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorQUERY_BuscadorInspecciones_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -2934,15 +2934,15 @@ public class LineaService {
     public void generaInspeccionAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idsolicitud,final boolean idsolicitudSpecified,final long idservicio,final boolean idservicioSpecified,final long idvehiculo,final boolean idvehiculoSpecified,final long idClasificacion,final boolean idClasificacionSpecified,final long idtipoinspeccion,final boolean idtipoinspeccionSpecified,final boolean alcanceTotal,final boolean alcanceTotalSpecified,final long idcentro,final boolean idcentroSpecified,final String codigoNumericoCentro,final boolean generaFechaValidez,final boolean generaFechaValidezSpecified,final String culturaDocumento,final long idInspeccionDeAlcance,final boolean idInspeccionDeAlcanceSpecified,final String fechaInspeccion,final boolean fechaInspeccionSpecified,final boolean esSegunda,final boolean esSegundaSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, KeyValuePairOfstringlong>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected KeyValuePairOfstringlong doInBackground(Void... params) {
                 return generaInspeccion(idUsuario, idUsuarioSpecified, idsolicitud, idsolicitudSpecified, idservicio, idservicioSpecified, idvehiculo, idvehiculoSpecified, idClasificacion, idClasificacionSpecified, idtipoinspeccion, idtipoinspeccionSpecified, alcanceTotal, alcanceTotalSpecified, idcentro, idcentroSpecified, codigoNumericoCentro, generaFechaValidez, generaFechaValidezSpecified, culturaDocumento, idInspeccionDeAlcance, idInspeccionDeAlcanceSpecified, fechaInspeccion, fechaInspeccionSpecified, esSegunda, esSegundaSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(KeyValuePairOfstringlong result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3029,15 +3029,15 @@ public class LineaService {
     public void actualizaAlcanceAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinspeccion,final boolean idinspeccionSpecified,final long idservicio,final boolean idservicioSpecified,final long idClasificacionNueva,final boolean idClasificacionNuevaSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return actualizaAlcance(idUsuario, idUsuarioSpecified, idinspeccion, idinspeccionSpecified, idservicio, idservicioSpecified, idClasificacionNueva, idClasificacionNuevaSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3110,15 +3110,15 @@ public class LineaService {
     public void getInspeccionesNoFinalizadasAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idCentro,final boolean idCentroSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorInspecionResumen>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorInspecionResumen doInBackground(Void... params) {
                 return getInspeccionesNoFinalizadas(idUsuario, idUsuarioSpecified, idCentro, idCentroSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorInspecionResumen result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3182,15 +3182,15 @@ public class LineaService {
     public void getInspeccionAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinspe,final boolean idinspeSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Inspeccion>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Inspeccion doInBackground(Void... params) {
                 return getInspeccion(idUsuario, idUsuarioSpecified, idinspe, idinspeSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(Inspeccion result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3255,15 +3255,15 @@ public class LineaService {
     public void GenerarNumeroInspeccionAsync(final String codigoNumericoCentro,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return GenerarNumeroInspeccion(codigoNumericoCentro, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3329,15 +3329,15 @@ public class LineaService {
     public void getEtapaBloqueByEtapaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idetapa,final boolean idetapaSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorEtapaBloque>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorEtapaBloque doInBackground(Void... params) {
                 return getEtapaBloqueByEtapa(idUsuario, idUsuarioSpecified, idetapa, idetapaSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorEtapaBloque result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3401,15 +3401,15 @@ public class LineaService {
     public void getImagenesInspeccionAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorInspeccionImagen>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorInspeccionImagen doInBackground(Void... params) {
                 return getImagenesInspeccion(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorInspeccionImagen result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3473,16 +3473,16 @@ public class LineaService {
     public void agregarImagenAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final VectorByte imagen,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 agregarImagen(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, imagen, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3531,15 +3531,15 @@ public class LineaService {
     public void eliminarImagenAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long idImagen,final boolean idImagenSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return eliminarImagen(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, idImagen, idImagenSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3610,15 +3610,15 @@ public class LineaService {
     public void getListaEtiquetasAsync(final long idUsuario,final boolean idUsuarioSpecified,final long desde,final boolean desdeSpecified,final long hasta,final boolean hastaSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorQUERY_ListaEtiquetas_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorQUERY_ListaEtiquetas_Result doInBackground(Void... params) {
                 return getListaEtiquetas(idUsuario, idUsuarioSpecified, desde, desdeSpecified, hasta, hastaSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorQUERY_ListaEtiquetas_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3684,16 +3684,16 @@ public class LineaService {
     public void getFechaValidezCalculadaAsync(final long idVehiculoClasificacion,final boolean idVehiculoClasificacionSpecified,final String fechaPrimeraMatriculacion,final boolean fechaPrimeraMatriculacionSpecified,final String fechaCierreInspeccion,final boolean fechaCierreInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 getFechaValidezCalculada(idVehiculoClasificacion, idVehiculoClasificacionSpecified, fechaPrimeraMatriculacion, fechaPrimeraMatriculacionSpecified, fechaCierreInspeccion, fechaCierreInspeccionSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3743,16 +3743,16 @@ public class LineaService {
     public void setFechaValidezCalculadaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long numeroDistintivo,final boolean numeroDistintivoSpecified,final long tipoDistitivo,final boolean tipoDistitivoSpecified,final String fechaValidezNueva,final boolean fechaValidezNuevaSpecified,final String obsercaciones,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 setFechaValidezCalculada(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, numeroDistintivo, numeroDistintivoSpecified, tipoDistitivo, tipoDistitivoSpecified, fechaValidezNueva, fechaValidezNuevaSpecified, obsercaciones, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3807,16 +3807,16 @@ public class LineaService {
     public void HayAlcancePendienteAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 HayAlcancePendiente(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3864,16 +3864,16 @@ public class LineaService {
     public void HayDefectosConsultaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 HayDefectosConsulta(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -3921,15 +3921,15 @@ public class LineaService {
     public void DuplicarInspeccionAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final String texto,final long idServicio,final boolean idServicioSpecified,final String centro,final long tipoDuplicar,final boolean tipoDuplicarSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Inspeccion>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Inspeccion doInBackground(Void... params) {
                 return DuplicarInspeccion(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, texto, idServicio, idServicioSpecified, centro, tipoDuplicar, tipoDuplicarSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(Inspeccion result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4000,15 +4000,15 @@ public class LineaService {
     public void getInspeccionesDeVehiculoFinalizadasAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idVehiculo,final boolean idVehiculoSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorInspeccion>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorInspeccion doInBackground(Void... params) {
                 return getInspeccionesDeVehiculoFinalizadas(idUsuario, idUsuarioSpecified, idVehiculo, idVehiculoSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorInspeccion result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4072,15 +4072,15 @@ public class LineaService {
     public void setLineaJefeEquipoAsync(final long idUsuario,final boolean idUsuarioSpecified,final VectorLineaJefeEquipo lista,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setLineaJefeEquipo(idUsuario, idUsuarioSpecified, lista, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4148,16 +4148,16 @@ public class LineaService {
     public void tieneLineaJefeEquipoAsync(final long idUsuario,final boolean idUsuarioSpecified,final String codigo,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 tieneLineaJefeEquipo(idUsuario, idUsuarioSpecified, codigo, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4204,15 +4204,15 @@ public class LineaService {
     public void getInspeccionAlcancePruebasYElementosAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorQueryInspeccionResultadoPrueba_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorQueryInspeccionResultadoPrueba_Result doInBackground(Void... params) {
                 return getInspeccionAlcancePruebasYElementos(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorQueryInspeccionResultadoPrueba_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4276,15 +4276,15 @@ public class LineaService {
     public void getAlcanceBloquePruebaEtapaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long idEtapa,final boolean idEtapaSpecified,final String bloques,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorQUERY_AlcanceBloquePruebaEtapa_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorQUERY_AlcanceBloquePruebaEtapa_Result doInBackground(Void... params) {
                 return getAlcanceBloquePruebaEtapa(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, idEtapa, idEtapaSpecified, bloques, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorQUERY_AlcanceBloquePruebaEtapa_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4351,16 +4351,16 @@ public class LineaService {
     public void setAlcancePruebaMaquinaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long idPrueba,final boolean idPruebaSpecified,final boolean realizada,final boolean realizadaSpecified,final long idMaquina,final boolean idMaquinaSpecified,final long idEtapa,final boolean idEtapaSpecified,final boolean autoConfirmar,final boolean autoConfirmarSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 setAlcancePruebaMaquina(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, idPrueba, idPruebaSpecified, realizada, realizadaSpecified, idMaquina, idMaquinaSpecified, idEtapa, idEtapaSpecified, autoConfirmar, autoConfirmarSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4418,16 +4418,16 @@ public class LineaService {
     public void setAlcancePruebaCondicionalidadAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idAlcancePrueba,final boolean idAlcancePruebaSpecified,final long idCondicionalidad,final boolean idCondicionalidadSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 setAlcancePruebaCondicionalidad(idUsuario, idUsuarioSpecified, idAlcancePrueba, idAlcancePruebaSpecified, idCondicionalidad, idCondicionalidadSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4477,15 +4477,15 @@ public class LineaService {
     public void hayOtrasInspeccionesAbiertasAsync(final long idCentro,final boolean idCentroSpecified,final long idEtapa,final boolean idEtapaSpecified,final String codigo,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorString>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorString doInBackground(Void... params) {
                 return hayOtrasInspeccionesAbiertas(idCentro, idCentroSpecified, idEtapa, idEtapaSpecified, codigo, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorString result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4550,15 +4550,15 @@ public class LineaService {
     public void getInspeccionDocumentosAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorInspeccionDocumento>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorInspeccionDocumento doInBackground(Void... params) {
                 return getInspeccionDocumentos(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorInspeccionDocumento result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4622,15 +4622,15 @@ public class LineaService {
     public void setInspeccionDocumentosAsync(final long _IdUsuario,final boolean _IdUsuarioSpecified,final long _idInspeccion,final boolean _idInspeccionSpecified,final String _URL,final String _Observaciones,final long _IdInspeccionDocumento,final boolean _IdInspeccionDocumentoSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return setInspeccionDocumentos(_IdUsuario, _IdUsuarioSpecified, _idInspeccion, _idInspeccionSpecified, _URL, _Observaciones, _IdInspeccionDocumento, _IdInspeccionDocumentoSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4703,15 +4703,15 @@ public class LineaService {
     public void delInspeccionDocumentosAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccionDocumento,final boolean idInspeccionDocumentoSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return delInspeccionDocumentos(idUsuario, idUsuarioSpecified, idInspeccionDocumento, idInspeccionDocumentoSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4780,15 +4780,15 @@ public class LineaService {
     public void getMaquinasUtilizadasEnInspeciconAsync(final long idInspeccion,final boolean idInspeccionSpecified,final int idIdioma,final boolean idIdiomaSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return getMaquinasUtilizadasEnInspecicon(idInspeccion, idInspeccionSpecified, idIdioma, idIdiomaSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4857,15 +4857,15 @@ public class LineaService {
     public void getPruebasTraducidasAsync(final VectorInt64 idsPruebas,final long idIdioma,final boolean idIdiomaSpecified,final String fecha,final boolean fechaSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorPrueba>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorPrueba doInBackground(Void... params) {
                 return getPruebasTraducidas(idsPruebas, idIdioma, idIdiomaSpecified, fecha, fechaSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorPrueba result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4930,16 +4930,16 @@ public class LineaService {
     public void NecesitaEtiquetaCierreAsync(final long idusuario,final boolean idusuarioSpecified,final long idInpseccion,final boolean idInpseccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 NecesitaEtiquetaCierre(idusuario, idusuarioSpecified, idInpseccion, idInpseccionSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -4987,16 +4987,16 @@ public class LineaService {
     public void getMaquinaPruebaEtapaAsync(final long idEtapa,final boolean idEtapaSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final long idPueba,final boolean idPuebaSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 getMaquinaPruebaEtapa(idEtapa, idEtapaSpecified, idInspeccion, idInspeccionSpecified, idPueba, idPuebaSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -5046,16 +5046,16 @@ public class LineaService {
     public void getEtiquetaAsignadaAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idinsp,final boolean idinspSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, Void>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected Void doInBackground(Void... params) {
                 getEtiquetaAsignada(idUsuario, idUsuarioSpecified, idinsp, idinspSpecified, headers);
                 return null;
             }
-            @Override
+         
             protected void onPostExecute(Void result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -5103,15 +5103,15 @@ public class LineaService {
     public void getBloquesInspeccionadosAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, String>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected String doInBackground(Void... params) {
                 return getBloquesInspeccionados(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(String result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -5180,15 +5180,15 @@ public class LineaService {
     public void getInspeccionAlcanceAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final boolean soloRevisados,final boolean soloRevisadosSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorInt64>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorInt64 doInBackground(Void... params) {
                 return getInspeccionAlcance(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, soloRevisados, soloRevisadosSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorInt64 result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -5254,15 +5254,15 @@ public class LineaService {
     public void getInspeccionAlcancePruebasAsync(final long idUsuario,final boolean idUsuarioSpecified,final long idInspeccion,final boolean idInspeccionSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorInspeccionAlcancePrueba>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorInspeccionAlcancePrueba doInBackground(Void... params) {
                 return getInspeccionAlcancePruebas(idUsuario, idUsuarioSpecified, idInspeccion, idInspeccionSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorInspeccionAlcancePrueba result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
@@ -5326,15 +5326,15 @@ public class LineaService {
     public void getEtiquetaResumenAsync(final long idUsuario,final boolean idUsuarioSpecified,final List<HeaderProperty> headers) throws Exception{
         
         new AsyncTask<Void, Void, VectorQUERY_ResumenEtiquetas_Result>(){
-            @Override
+         
             protected void onPreExecute() {
                 eventHandler.Wsdl2CodeStartedRequest();
             };
-            @Override
+         
             protected VectorQUERY_ResumenEtiquetas_Result doInBackground(Void... params) {
                 return getEtiquetaResumen(idUsuario, idUsuarioSpecified, headers);
             }
-            @Override
+         
             protected void onPostExecute(VectorQUERY_ResumenEtiquetas_Result result)
             {
                 eventHandler.Wsdl2CodeEndedRequest();
