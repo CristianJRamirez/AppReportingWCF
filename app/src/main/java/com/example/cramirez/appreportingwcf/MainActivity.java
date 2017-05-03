@@ -1,6 +1,7 @@
 package com.example.cramirez.appreportingwcf;
 import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.ReportingService.*;
 import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.ReportingService.ReportingService;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.LineaService.*;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity  implements com.example.cram
 
 
 
-    public ArrayList<QUERY_Provincias_Result> callWebService(){
+    public ArrayList<QUERY_Provincias_Result> callWebServiceReporting(){
         ReportingService reportingService = new ReportingService(this);
         Drawable drw = getResources().getDrawable(R.drawable.icon);
         Bitmap bitmap = ((BitmapDrawable)drw).getBitmap();
@@ -102,14 +103,10 @@ public class MainActivity extends AppCompatActivity  implements com.example.cram
         try {
             VectorQUERY_Provincias_Result resultado= reportingService.getProvincias();
 
-
-
             ArrayList<QUERY_Provincias_Result> list = new ArrayList<QUERY_Provincias_Result>(resultado);
 
             Log.d("DATOS",resultado.get(0).codigoCorreos);
             txt.setText(resultado.get(0).codigoCorreos);
-
-
             return  list;
 
         } catch (Exception e) {
@@ -118,6 +115,29 @@ public class MainActivity extends AppCompatActivity  implements com.example.cram
             return null;
         }
     }
+
+    public ArrayList<QUERY_Provincias_Result> callWebServiceLinea(){
+
+
+        LineaService lineaService = new LineaService(this);
+        ReportingService reportingService = new ReportingService(this);
+
+        try {
+            VectorQUERY_Provincias_Result resultado= reportingService.getProvincias();
+
+            ArrayList<QUERY_Provincias_Result> list = new ArrayList<QUERY_Provincias_Result>(resultado);
+
+            Log.d("DATOS",resultado.get(0).codigoCorreos);
+            txt.setText(resultado.get(0).codigoCorreos);
+            return  list;
+
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
     @Override
     public void onStart() {
@@ -131,7 +151,7 @@ public class MainActivity extends AppCompatActivity  implements com.example.cram
         @Override
         protected ArrayList<QUERY_Provincias_Result> doInBackground(Void... voids) {
 
-            return callWebService();
+            return callWebServiceReporting();
         }
         @Override
         protected void onPostExecute(ArrayList<QUERY_Provincias_Result> provin) {
