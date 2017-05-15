@@ -300,15 +300,7 @@ public class FiltroListadoFactura implements KvmSerializable {
         }
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
+
     
     
     @Override

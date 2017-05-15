@@ -334,16 +334,7 @@ public class QUERY_ReportFacturaAlbaran_PorServicio_Result implements KvmSeriali
         }
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
-    
+
     
     @Override
     public void setProperty(int arg0, Object arg1) {

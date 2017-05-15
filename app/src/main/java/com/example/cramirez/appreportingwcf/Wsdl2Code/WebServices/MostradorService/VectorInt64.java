@@ -55,16 +55,7 @@ public class VectorInt64 extends Vector<Number> implements KvmSerializable {
         info.type = long.class;
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
-    
+
     
     @Override
     public void setProperty(int arg0, Object arg1) {

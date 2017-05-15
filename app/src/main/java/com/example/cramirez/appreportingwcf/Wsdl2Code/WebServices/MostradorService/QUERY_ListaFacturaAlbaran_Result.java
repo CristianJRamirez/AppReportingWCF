@@ -1184,16 +1184,7 @@ public class QUERY_ListaFacturaAlbaran_Result implements KvmSerializable {
         }
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
-    
+
     
     @Override
     public void setProperty(int arg0, Object arg1) {

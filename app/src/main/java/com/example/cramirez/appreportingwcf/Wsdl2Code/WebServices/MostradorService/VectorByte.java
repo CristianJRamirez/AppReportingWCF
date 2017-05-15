@@ -56,15 +56,7 @@ public class VectorByte extends Vector<Byte> implements KvmSerializable {
         info.type = Byte.class;
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
+
     
     
     @Override

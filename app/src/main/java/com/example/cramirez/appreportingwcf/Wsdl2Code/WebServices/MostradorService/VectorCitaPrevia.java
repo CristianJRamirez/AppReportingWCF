@@ -17,7 +17,7 @@ import java.util.Hashtable;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import java.util.Vector;
-import package com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.CitaPrevia;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.CitaPrevia;
 
 public class VectorCitaPrevia extends Vector<CitaPrevia> implements KvmSerializable {
     
@@ -56,16 +56,7 @@ public class VectorCitaPrevia extends Vector<CitaPrevia> implements KvmSerializa
         info.type = CitaPrevia.class;
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
-    
+
     
     @Override
     public void setProperty(int arg0, Object arg1) {

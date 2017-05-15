@@ -17,7 +17,7 @@ import java.util.Hashtable;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import java.util.Vector;
-import package com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.Cliente;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.Cliente;
 
 public class VectorCliente extends Vector<Cliente> implements KvmSerializable {
     
@@ -56,16 +56,7 @@ public class VectorCliente extends Vector<Cliente> implements KvmSerializable {
         info.type = Cliente.class;
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
-    
+
     
     @Override
     public void setProperty(int arg0, Object arg1) {

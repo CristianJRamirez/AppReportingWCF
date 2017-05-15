@@ -17,7 +17,7 @@ import java.util.Hashtable;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import java.util.Vector;
-import package com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.Query_ImpresionTIT_Solicitud_Result;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.Query_ImpresionTIT_Solicitud_Result;
 
 public class VectorQuery_ImpresionTIT_Solicitud_Result extends Vector<Query_ImpresionTIT_Solicitud_Result> implements KvmSerializable {
     
@@ -56,16 +56,7 @@ public class VectorQuery_ImpresionTIT_Solicitud_Result extends Vector<Query_Impr
         info.type = Query_ImpresionTIT_Solicitud_Result.class;
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
-    
+
     
     @Override
     public void setProperty(int arg0, Object arg1) {

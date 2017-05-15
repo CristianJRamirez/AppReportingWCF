@@ -1609,15 +1609,7 @@ public class Query_ImpresionTIT_Todas_Result implements KvmSerializable {
         }
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
+
     
     
     @Override

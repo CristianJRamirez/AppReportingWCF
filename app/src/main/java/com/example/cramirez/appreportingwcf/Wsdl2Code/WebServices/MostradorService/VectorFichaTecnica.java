@@ -17,7 +17,7 @@ import java.util.Hashtable;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import java.util.Vector;
-import package com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.FichaTecnica;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.FichaTecnica;
 
 public class VectorFichaTecnica extends Vector<FichaTecnica> implements KvmSerializable {
     
@@ -56,15 +56,7 @@ public class VectorFichaTecnica extends Vector<FichaTecnica> implements KvmSeria
         info.type = FichaTecnica.class;
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
+
     
     
     @Override

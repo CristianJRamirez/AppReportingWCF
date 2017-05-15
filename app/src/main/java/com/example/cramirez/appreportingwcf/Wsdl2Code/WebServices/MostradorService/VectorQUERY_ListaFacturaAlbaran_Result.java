@@ -17,7 +17,7 @@ import java.util.Hashtable;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import java.util.Vector;
-import package com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.QUERY_ListaFacturaAlbaran_Result;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.QUERY_ListaFacturaAlbaran_Result;
 
 public class VectorQUERY_ListaFacturaAlbaran_Result extends Vector<QUERY_ListaFacturaAlbaran_Result> implements KvmSerializable {
     
@@ -56,15 +56,7 @@ public class VectorQUERY_ListaFacturaAlbaran_Result extends Vector<QUERY_ListaFa
         info.type = QUERY_ListaFacturaAlbaran_Result.class;
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
+
     
     
     @Override

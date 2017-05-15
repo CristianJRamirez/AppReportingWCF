@@ -17,7 +17,7 @@ import java.util.Hashtable;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import java.util.Vector;
-import package com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.Query_InspeccionesVehiculo_Result;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.Query_InspeccionesVehiculo_Result;
 
 public class VectorQuery_InspeccionesVehiculo_Result extends Vector<Query_InspeccionesVehiculo_Result> implements KvmSerializable {
     
@@ -56,15 +56,7 @@ public class VectorQuery_InspeccionesVehiculo_Result extends Vector<Query_Inspec
         info.type = Query_InspeccionesVehiculo_Result.class;
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
+
     
     
     @Override

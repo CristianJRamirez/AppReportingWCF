@@ -17,7 +17,7 @@ import java.util.Hashtable;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import java.util.Vector;
-import package com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.FacturaPrestacion;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.FacturaPrestacion;
 
 public class VectorFacturaPrestacion extends Vector<FacturaPrestacion> implements KvmSerializable {
     
@@ -56,15 +56,7 @@ public class VectorFacturaPrestacion extends Vector<FacturaPrestacion> implement
         info.type = FacturaPrestacion.class;
     }
     
-    @Override
-    public String getInnerText() {
-        return null;
-    }
-    
-    
-    @Override
-    public void setInnerText(String s) {
-    }
+
     
     
     @Override
