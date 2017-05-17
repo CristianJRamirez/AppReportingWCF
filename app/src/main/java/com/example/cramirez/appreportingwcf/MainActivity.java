@@ -1,7 +1,9 @@
 package com.example.cramirez.appreportingwcf;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.*;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.WS_Enums;
 import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.ReportingService.*;
+import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.ReportingService.IWsdl2CodeEvents;
 import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.ReportingService.ReportingService;
-import com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.LineaService.*;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -18,18 +20,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.ksoap2.serialization.PropertyInfo;
-import org.ksoap2.serialization.SoapObject;
-
 import java.io.ByteArrayOutputStream;
-import java.sql.Time;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 import java.util.Vector;
 
 
@@ -101,7 +94,7 @@ public class MainActivity extends AppCompatActivity  implements com.example.cram
 
 
 
-    public ArrayList<QUERY_Provincias_Result> callWebServiceReporting(){
+    public ArrayList<QUERY_Provincias_Result> callWebService(){
         ReportingService reportingService = new ReportingService(this);
         Drawable drw = getResources().getDrawable(R.drawable.icon);
         Bitmap bitmap = ((BitmapDrawable)drw).getBitmap();
@@ -112,10 +105,14 @@ public class MainActivity extends AppCompatActivity  implements com.example.cram
         try {
             VectorQUERY_Provincias_Result resultado= reportingService.getProvincias();
 
+
+
             ArrayList<QUERY_Provincias_Result> list = new ArrayList<QUERY_Provincias_Result>(resultado);
 
             Log.d("DATOS",resultado.get(0).codigoCorreos);
             txt.setText(resultado.get(0).codigoCorreos);
+
+
             return  list;
 
         } catch (Exception e) {
@@ -125,89 +122,6 @@ public class MainActivity extends AppCompatActivity  implements com.example.cram
         }
     }
 
-    public void callWebServiceLinea(){
-
-
-        LineaService lineaService = new LineaService();
-
-        String NAMESPACE = "http://tempuri.org/";
-        String URL = "http://172.18.2.190/DNOTALinea/LineaService.svc";
-        String SOAP_ACTION = "...";
-        String METODO = null;
-
-
-        try {
-            //genero las propiedades que se necesitan para el RegistroEtiquetas, Comprovar que las fechas funciona
-            ArrayList<PropertyInfo> lista=generarProperty();
-
-            //creo el objeto Soap para pasarselo al SET
-            SoapObject soap = new SoapObject(NAMESPACE,METODO);
-
-
-            for (PropertyInfo pInfo:lista) {
-                soap.addProperty(pInfo);
-            }
-
-            //instancio el servicio de guardar datos en la BBDD
-            lineaService.setRegistroEtiquetas(new SetRegistroEtiquetasInput(soap));
-
-           /* Log.d("DATOS",resultado.get(0).codigoCorreos);
-            txt.setText(resultado.get(0).codigoCorreos);*/
-            //return  list;
-
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            //return null;
-        }
-    }
-
-    private ArrayList<PropertyInfo> generarProperty() {
-        ArrayList<PropertyInfo> lista= new ArrayList<PropertyInfo>();
-
-        Date d = new Date();
-
-        PropertyInfo idUsuario = new PropertyInfo ();
-            idUsuario.setName("idUsuario");
-            idUsuario.setValue((long)2);
-            lista.add(idUsuario);
-        PropertyInfo idCentro = new PropertyInfo ();
-            idCentro.setName("idCentro");
-            idCentro.setValue((long)5);
-            lista.add(idCentro);
-        PropertyInfo descripcionLote = new PropertyInfo ();
-            descripcionLote.setName("descripcionLote");
-            descripcionLote.setValue("descripcion del lote");
-            lista.add(descripcionLote);
-        PropertyInfo fechaIni = new PropertyInfo ();
-            fechaIni.setName("fechaIni");
-            fechaIni.setValue(d.getTime());
-            lista.add(fechaIni);
-        PropertyInfo fechaFin = new PropertyInfo ();
-            fechaFin.setName("fechaFin");
-            fechaFin.setValue(d.getTime());
-            lista.add(fechaFin);
-        PropertyInfo minNum = new PropertyInfo ();
-            minNum.setName("minNum");
-            minNum.setValue((long)5);
-            lista.add(minNum);
-        PropertyInfo maxNum = new PropertyInfo ();
-            maxNum.setName("maxNum");
-            maxNum.setValue((long)5);
-            lista.add(maxNum);
-        PropertyInfo libre = new PropertyInfo ();
-            libre.setName("libre");
-            libre.setValue((boolean)true);
-            lista.add(libre);
-        PropertyInfo valido = new PropertyInfo ();
-            valido.setName("valido");
-            valido.setValue((boolean)true);
-            lista.add(valido);
-
-        return lista;
-    }
-
-
     @Override
     public void onStart() {
         super.onStart();
@@ -216,20 +130,87 @@ public class MainActivity extends AppCompatActivity  implements com.example.cram
     }
 
 
-    private class RefreshDataTask extends AsyncTask<Void, Void,ArrayList<QUERY_Provincias_Result>> {
-        @Override
-        protected ArrayList<QUERY_Provincias_Result> doInBackground(Void... voids) {
+    public String callWebServiceMostrador(){
+        MostradorService mostradorService = new MostradorService(new com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.IWsdl2CodeEvents() {
+            @Override
+            public void Wsdl2CodeStartedRequest() {
+                Log.e("Wsdl2Code", "Wsdl2CodeStartedRequest");
 
-            return callWebServiceReporting();
+            }
+            @Override
+            public void Wsdl2CodeFinished(String methodName, Object Data) {
+                Log.e("Wsdl2Code", "Wsdl2CodeFinished");
+                Log.e("Wsdl2Code",methodName);
+
+            }
+            @Override
+            public void Wsdl2CodeFinishedWithException(Exception ex) {
+                Log.e("Wsdl2Code", "Wsdl2CodeFinishedWithException");
+
+            }
+            @Override
+            public void Wsdl2CodeEndedRequest() {
+                Log.e("Wsdl2Code", "Wsdl2CodeEndedRequest");
+            }
+        });
+
+//="HOLA";//
+        try {
+            String resultado="HOLA";//= mostradorService.GenerarNumeroFactura("b22",WS_Enums.eCodigoCertio.fromString("FO"),true,false,false);
+
+
+            mostradorService.RegistrarLog(5,true,WS_Enums.LogTramaeTipoLog.Error,true,"Inspeccion","BUENAS","FUNCIONA",0,true);
+
+            Log.d("DATOS",resultado);
+            txt.setText(resultado);
+
+
+            return  resultado;
+
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private class RefreshDataTask extends AsyncTask<Void, Void,String> {
+        @Override
+        protected String doInBackground(Void... voids) {
+            MostradorService mostradorService = new MostradorService(new com.example.cramirez.appreportingwcf.Wsdl2Code.WebServices.MostradorService.IWsdl2CodeEvents() {
+                @Override
+                public void Wsdl2CodeStartedRequest() {
+                    Log.e("Wsdl2Code", "Wsdl2CodeStartedRequest");
+
+                }
+                @Override
+                public void Wsdl2CodeFinished(String methodName, Object Data) {
+                    Log.e("Wsdl2Code", "Wsdl2CodeFinished");
+                    Log.e("Wsdl2Code",methodName);
+
+                }
+                @Override
+                public void Wsdl2CodeFinishedWithException(Exception ex) {
+                    Log.e("Wsdl2Code", "Wsdl2CodeFinishedWithException");
+
+                }
+                @Override
+                public void Wsdl2CodeEndedRequest() {
+                    Log.e("Wsdl2Code", "Wsdl2CodeEndedRequest");
+                }
+            });
+            mostradorService.RegistrarLog(5,true,WS_Enums.LogTramaeTipoLog.Error,true,"Inspeccion","BUENAS2","FUNCIONA2",0,true);
+
+            return "ADIOS";
         }
         @Override
-        protected void onPostExecute(ArrayList<QUERY_Provincias_Result> provin) {
-            super.onPostExecute(provin);
-            adapter.clear();
+        protected void onPostExecute(String num) {
+            super.onPostExecute(num);
+            /*adapter.clear();
             Log.d("DA",provin.size()+"");
-            for (QUERY_Provincias_Result p : provin) {
+            for (QUERY_Provincias_Result p : num) {
                 adapter.add(p);
-            }
+            }*/
         }
     }
 

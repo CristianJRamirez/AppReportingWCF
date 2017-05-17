@@ -533,9 +533,9 @@ public class Query_ImpresionTIT_Solicitud_Result implements KvmSerializable {
             Object obj = soapObject.getProperty("J");
             if (obj != null && obj.getClass().equals(SoapPrimitive.class)){
                 SoapPrimitive j =(SoapPrimitive) obj;
-                j = j.toString();
+                this.j = j.toString();
             }else if (obj!= null && obj instanceof String){
-                j = (String) obj;
+                this.j = (String) obj;
             }
         }
         if (soapObject.hasProperty("J1"))
